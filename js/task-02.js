@@ -6,11 +6,14 @@ const ingredients = [
   "Herbs",
   "Condiments",
 ];
-const listEl = document.querySelector("ul#ingredients");
-const createIngridientsList = ingredients.map((ingridient) => {
-  const ingridientsEl = document.createElement("li");
-  ingridientsEl.classList.add("item");
-  ingridientsEl.textContent = ingridient;
-  return ingridientsEl;
-});
-listEl.append(...createIngridientsList);
+const listRef = document.querySelector("ul#ingredients");
+const createIngridientsList = (ingredients) => {
+  return ingredients.map((ingridient) => {
+    const ingridientsEl = document.createElement("li");
+    ingridientsEl.classList.add("item");
+    ingridientsEl.textContent = ingridient;
+    return ingridientsEl;
+  });
+};
+const listElements = createIngridientsList(ingredients);
+listRef.append(...listElements);
