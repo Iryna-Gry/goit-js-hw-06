@@ -1,10 +1,10 @@
 const inputEl = document.querySelector("input#name-input");
 const spanNameOutput = document.querySelector("span#name-output");
-const addNameInput = (event) => {
+const replaceNameOutput = (event) => {
   if (event.currentTarget.value === "") {
     spanNameOutput.textContent = "Anonymous";
   } else {
     spanNameOutput.textContent = event.currentTarget.value;
   }
 };
-inputEl.addEventListener("input", addNameInput);
+inputEl.addEventListener("input", replaceNameOutput);
