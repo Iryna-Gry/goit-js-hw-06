@@ -15,7 +15,9 @@ const images = [
 const galleryList = document.querySelector("ul.gallery");
 galleryList.style =
   "display:flex; justify-content: center; flex-flow: row nowrap; list-style:none; height:100%";
-const createGallery = images.map((image) => {
-  return `<li><img src=${image.url} alt=${image.alt} style= max-width:350px; /></li>`;
-});
+const createGallery = images
+  .map((image) => {
+    return `<li><img src=${image.url} alt=${image.alt} style= max-width:350px; /></li>`;
+  })
+  .join("");
 galleryList.insertAdjacentHTML("afterbegin", createGallery);
